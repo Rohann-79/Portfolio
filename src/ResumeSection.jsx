@@ -17,7 +17,7 @@ const ResumeSection = () => {
         </h2>
         <div className="text-center" data-aos="slide-up">
           <a
-            href="https://drive.google.com/file/d/1W8OSY8VZLXHAfQlx3tAMJDvXJgccrtt0/view"
+            href="https://drive.google.com/file/d/1W8OSY8VZLXHAfQlx3tAMJDvXJgccrtt0/view?usp=drive_link"
             download
             className={`${
               isDarkMode
