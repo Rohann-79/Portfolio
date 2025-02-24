@@ -6,23 +6,26 @@ import Contact from "./Contact";
 import ResumeSection from "./ResumeSection";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { DarkModeProvider } from "./DarkModeContext"; // Import DarkModeProvider
 
 function App() {
   useEffect(() => {
     AOS.init({
-      duration: 1000, 
-      once: true, 
+      duration: 1000,
+      once: true,
     });
   }, []);
 
   return (
-    <div>
-      <Navbar />
-      <Hero />
-      <ResumeSection />
-      <Projects />
-      <Contact />
-    </div>
+    <DarkModeProvider> {/* Wrap the entire app with DarkModeProvider */}
+      <div>
+        <Navbar />
+        <Hero />
+        <ResumeSection />
+        <Projects />
+        <Contact />
+      </div>
+    </DarkModeProvider>
   );
 }
 
