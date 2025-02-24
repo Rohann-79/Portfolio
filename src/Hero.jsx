@@ -1,9 +1,20 @@
 import React, { useContext } from "react";
 import { DarkModeContext } from "./DarkModeContext";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const Hero = () => {
   const { isDarkMode } = useContext(DarkModeContext);
-
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+  };
   return (
     <section
       id="hero"
@@ -38,7 +49,7 @@ const Hero = () => {
           {/* Right Column (Image) */}
           <div className="flex justify-center" data-aos="fade-left" data-aos-delay="800">
             <img
-              src="" // Replace with your image URL
+              src="https://cdn.pixabay.com/photo/2021/08/04/13/06/software-developer-6521720_1280.jpg" // Replace with your image URL
               alt="Hero Image 1"
               className="rounded-lg shadow-lg"
             />
@@ -47,13 +58,31 @@ const Hero = () => {
 
         {/* Second Row: Left (Image) - Right (Text) */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-          {/* Left Column (Image) */}
+          {/* Left Column (Carousel) */}
           <div className="flex justify-center" data-aos="fade-right" data-aos-delay="1000">
-            <img
-              src="" // Replace with your image URL
-              alt="Hero Image 2"
-              className="rounded-lg shadow-lg"
-            />
+            <Slider {...settings} className="w-full max-w-md">
+              <div>
+                <img
+                  src="/images/project1.png"// Replace with your project screenshot 1
+                  alt="Project Screenshot 1"
+                  className="rounded-lg shadow-lg"
+                />
+              </div>
+              <div>
+                <img
+                  src="/images/project2.png" // Replace with your project screenshot 2
+                  alt="Project Screenshot 2"
+                  className="rounded-lg shadow-lg"
+                />
+              </div>
+              <div>
+                <img
+                  src="/images/project3.png" // Replace with your project screenshot 3
+                  alt="Project Screenshot 3"
+                  className="rounded-lg shadow-lg"
+                />
+              </div>
+            </Slider>
           </div>
 
           {/* Right Column (Text) */}
