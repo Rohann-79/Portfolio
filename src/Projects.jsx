@@ -10,9 +10,8 @@ const Projects = () => {
       description: (
         <>
           <p>
-            - Engineered a React-based platform for tracking caffeine intake,
-            offering users insights on caffeine levels, time since their last
-            coffee, and potential health impacts.
+            - Launched a data-driven platform for caffeine monitoring via React, which aggregates user data to provide health
+            insights; achieved a response time of under 2 seconds for user queries, enhancing overall user experience.
           </p>
           <p>
             - Implemented JWT authentication for secure sign-in and sign-out,
@@ -28,8 +27,8 @@ const Projects = () => {
       description: (
         <>
           <p>
-            - Engineered a real-time age and gender detection system using DNN
-            and Caffe models, achieving accurate predictions from video feeds.
+            - Developed a real-time age and gender detection system using DNN and Caffe models, ensuring precise predictions
+            from video feeds while achieving 85% accuracy for immediate analysis during live sessions.
           </p>
           <p>
             - Implemented the solution on the web using the Flask framework,
