@@ -36,7 +36,7 @@ const Hero = () => {
               data-aos-duration="1000"
               data-aos-delay="200"
             >
-              Rohann Keerthy
+              Hi I'm Rohann Keerthy
             </h1>
             <p className="text-lg" data-aos="fade-right" data-aos-delay="400"> {/* Reduced from text-xl to text-lg */}
               Driven Computer Science and Engineering student specializing in Artificial Intelligence and Machine Learning, dedicated to designing innovative, scalable solutions that enhance user experiences and optimize system performance.
@@ -49,7 +49,7 @@ const Hero = () => {
           {/* Right Column (Image) */}
           <div className="flex justify-center" data-aos="fade-left" data-aos-delay="800">
             <img
-              src="https://cdn.pixabay.com/photo/2021/08/04/13/06/software-developer-6521720_1280.jpg" // Replace with your image URL
+              src="images/home-main.svg" // Replace with your image URL
               alt="Hero Image 1"
               className="rounded-lg shadow-lg"
             />
