@@ -59,6 +59,23 @@ const Projects = () => {
       githubLink: "https://github.com/Rohann-79/Discord-Player-Bot",
       liveDemo: "https://discord.com/oauth2/authorize?client_id=1334784399111360512&permissions=1729521119656256&integration_type=0&scope=bot",
     },
+    {
+      title: "ExpenseGenius: AI based Expense Tracking Web App ",
+      description: (
+        <>
+          <p>
+            - Launched a secure, AI-powered expense tracker with JWT authentication, ensuring user data privacy and secure
+login, while providing personalized financial insights and saving strategies based on user behavior.
+          </p>
+          <p>
+            - Developed interactive data visualizations using charts to represent spending patterns and savings goals, enhanc-
+ing user experience and decision-making through actionable, data-driven financial reports.
+          </p>
+        </>
+      ),
+      githubLink: "https://github.com/Rohann-79/finance-tracker",
+      liveDemo: "https://finance-tracker-jet-eight.vercel.app/",
+    },
   ];
 
   return (
