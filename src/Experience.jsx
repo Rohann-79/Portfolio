@@ -17,7 +17,7 @@ const Experience = () => {
     {
       company: "Freelance",
       role: "Full-Stack Developer",
-      duration: "Jan 2022 - May 2023",
+      duration: "Jan 2022 - May 2022",
       description: [
         "Developed and deployed web applications using React and Node.js.",
         "Implemented user authentication and authorization systems.",
