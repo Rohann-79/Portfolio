@@ -6,6 +6,22 @@ const Projects = () => {
 
   const projects = [
     {
+      title: "Nexus AI: An AI Marketplace",
+      description: (
+        <>
+          <p>
+            - Developed and deployed Nexus AI, a secure web application enabling users to buy and sell AI models using cryptocurrency, 
+            leveraging Firebase for user authentication and ensuring seamless transactions and data privacy.
+          </p>
+          <p>
+            - Integrated blockchain technology for secure, transparent transactions and implemented Firebase for real-time user management, 
+            optimizing performance and enhancing user experience within a decentralized marketplace.
+          </p>
+        </>
+      ),
+      githubLink: "https://github.com/Rohann-79/AI-Market-Place",
+    },
+    {
       title: "SipSense: Caffeine tracking in Coffee using React ",
       description: (
         <>
