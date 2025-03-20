@@ -179,7 +179,7 @@ const Contact = () => {
                     isDarkMode ? "text-purple-400" : "text-blue-600"
                   }`} />
                 </div>
-                <span>rohannkeerthy@gmail.com</span>
+                <span>rohann.keerth@gmail.com</span>
               </a>
 
               <a
