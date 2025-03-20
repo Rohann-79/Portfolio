@@ -167,7 +167,7 @@ const Contact = () => {
 
             <div className="space-y-6">
               <a
-                href="mailto:rohannkeerthy@gmail.com"
+                href="mailto:rohann.keerth@gmail.com"
                 className={`flex items-center space-x-4 ${
                   isDarkMode ? "text-gray-300 hover:text-purple-400" : "text-gray-600 hover:text-blue-600"
                 } transition-colors`}
