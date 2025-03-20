@@ -37,7 +37,7 @@ const ResumeSection = () => {
               I'm currently looking for new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!
             </p>
             <a
-              href="https://drive.google.com/file/d/1W8OSY8VZLXHAfQlx3tAMJDvXJgccrtt0/view"
+              href="https://drive.google.com/file/d/1OPaViwm2hbHGn_v1BIjXyN4AA_uuDTH0/view?usp=drive_link"
               target="_blank"
               rel="noopener noreferrer"
               className={`inline-flex items-center space-x-2 px-6 py-3 rounded-lg ${
