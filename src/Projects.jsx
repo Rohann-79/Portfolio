@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { DarkModeContext } from "./DarkModeContext";
+import { FaGithub, FaExternalLinkAlt, FaCode } from "react-icons/fa";
 
 const Projects = () => {
   const { isDarkMode } = useContext(DarkModeContext);
@@ -20,6 +21,22 @@ const Projects = () => {
         </>
       ),
       githubLink: "https://github.com/Rohann-79/AI-Market-Place",
+      liveDemo: "https://ai-market-place-khaki.vercel.app/",
+    },
+    {
+      title: "HealthForge: AI-Powered Health Tips Platform",
+      description: (
+        <>
+          <p>
+            - Developed and deployed HealthForge, a Next.js web application built with TypeScript, offering personalized health tips and fitness recommendations powered by machine learning models.
+          </p>
+          <p>
+            - Utilized Firebase for real-time user management and authentication, ensuring seamless user interactions and data privacy. 
+            Integrated Python-based backend for handling data processing and model training to provide personalized recommendations for health improvement.
+          </p>
+        </>
+      ),
+      githubLink: "https://github.com/Rohann-79/Healthforge",
     },
     {
       title: "SipSense: Caffeine tracking in Coffee using React ",
@@ -99,70 +116,88 @@ ing user experience and decision-making through actionable, data-driven financia
       id="projects"
       className={`py-20 ${
         isDarkMode
-          ? "bg-gradient-to-r from-gray-900 to-gray-800"
+          ? "bg-gradient-to-br from-[#0a0a1a] via-[#1a1a2e] to-[#0a0a1a]"
           : "bg-gradient-to-r from-blue-50 to-purple-50"
       }`}
     >
-      <h2
-        className={`text-4xl font-bold text-center mb-10 ${
-          isDarkMode ? "text-white" : "text-gray-800"
-        }`}
-        data-aos="fade-right"
-      >
-        Projects
-      </h2>
       <div className="container mx-auto px-4">
-        {projects.map((project, index) => (
-          <div
-            key={index}
-            className={`mb-8 p-6 rounded-lg ${
-              isDarkMode ? "bg-gray-700" : "bg-white"
-            }`}
-            data-aos="fade-up"
-            data-aos-delay={index * 200}
-          >
-            <h3
-              className={`text-2xl font-semibold ${
-                isDarkMode ? "text-white" : "text-gray-800"
-              }`}
-            >
-              {project.title}
-            </h3>
+        <h2
+          className={`text-4xl font-bold text-center mb-4 ${
+            isDarkMode ? "text-white" : "text-gray-800"
+          } code-text`}
+          data-aos="fade-right"
+        >
+          Projects
+        </h2>
+        <p
+          className={`text-center mb-12 ${
+            isDarkMode ? "text-gray-400" : "text-gray-600"
+          }`}
+          data-aos="fade-up"
+        >
+          Some things I've built
+        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projects.map((project, index) => (
             <div
-              className={`mt-2 ${
-                isDarkMode ? "text-gray-300" : "text-gray-700"
-              }`}
+              key={index}
+              className={`p-6 rounded-lg ${
+                isDarkMode ? "bg-[#1a1a2e]/50" : "bg-white/50"
+              } backdrop-blur-sm hover:scale-105 transition-transform duration-300`}
+              data-aos="fade-up"
+              data-aos-delay={index * 200}
             >
-              {project.description}
+              <div className="flex items-center space-x-2 mb-4">
+                <FaCode className={`text-xl ${
+                  isDarkMode ? "text-purple-400" : "text-blue-600"
+                }`} />
+                <h3 className={`text-xl font-semibold ${
+                  isDarkMode ? "text-white" : "text-gray-800"
+                }`}>
+                  {project.title}
+                </h3>
+              </div>
+
+              <div className={`space-y-2 mb-6 ${
+                isDarkMode ? "text-gray-300" : "text-gray-700"
+              }`}>
+                {project.description}
+              </div>
+
+              <div className="flex space-x-4">
+                <a
+                  href={project.githubLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`flex items-center space-x-2 px-4 py-2 rounded-lg ${
+                    isDarkMode
+                      ? "bg-[#2a2a3e] text-white hover:bg-[#3a3a4e]"
+                      : "bg-gray-100 text-gray-800 hover:bg-gray-200"
+                  } transition-colors duration-300`}
+                >
+                  <FaGithub />
+                  <span>Code</span>
+                </a>
+                {project.liveDemo && (
+                  <a
+                    href={project.liveDemo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`flex items-center space-x-2 px-4 py-2 rounded-lg ${
+                      isDarkMode
+                        ? "bg-[#2a2a3e] text-white hover:bg-[#3a3a4e]"
+                        : "bg-gray-100 text-gray-800 hover:bg-gray-200"
+                    } transition-colors duration-300`}
+                  >
+                    <FaExternalLinkAlt />
+                    <span>Live Demo</span>
+                  </a>
+                )}
+              </div>
             </div>
-            <div className="mt-4">
-              <a
-                href={project.githubLink}
-                className={`mr-4 ${
-                  isDarkMode
-                    ? "text-blue-400 hover:text-blue-300"
-                    : "text-blue-500 hover:text-blue-600"
-                }`}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                GitHub
-              </a>
-              <a
-                href={project.liveDemo}
-                className={`${
-                  isDarkMode
-                    ? "text-blue-400 hover:text-blue-300"
-                    : "text-blue-500 hover:text-blue-600"
-                }`}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Live Demo
-              </a>
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );

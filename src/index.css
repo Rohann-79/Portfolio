@@ -2,6 +2,43 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Dark mode specific styles */
+.dark-mode {
+  background: linear-gradient(135deg, #0a0a1a 0%, #1a1a2e 100%);
+  color: #e2e8f0;
+}
+
+/* Modern scrollbar for dark mode */
+.dark-mode ::-webkit-scrollbar {
+  width: 8px;
+}
+
+.dark-mode ::-webkit-scrollbar-track {
+  background: #1a1a2e;
+}
+
+.dark-mode ::-webkit-scrollbar-thumb {
+  background: #4a1d96;
+  border-radius: 4px;
+}
+
+.dark-mode ::-webkit-scrollbar-thumb:hover {
+  background: #5b21b6;
+}
+
+/* Code-like font for developer feel */
+.dark-mode code {
+  font-family: 'Fira Code', 'Consolas', monospace;
+  font-size: 0.9em;
+}
+
+/* Modern selection color */
+.dark-mode ::selection {
+  background: #3b82f6;
+  color: #ffffff;
+}
+
+/* Light mode styles */
 body {
   background: linear-gradient(-45deg, #9fccec, #f59f9f, #e0f2ff, #ee9393);
   background-size: 400% 400%;
@@ -20,6 +57,85 @@ body {
   }
 }
 
+/* Modern card hover effect */
+.hover-card {
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.hover-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.3);
+}
+
+/* Code-like text effect */
+.code-text {
+  font-family: 'Fira Code', 'Consolas', monospace;
+  letter-spacing: 0.05em;
+}
+
+/* Glowing effect for important elements */
+.glow {
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
+}
+
+/* Animated Background Animations */
+@keyframes codeRain {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(10px, -10px);
+  }
+  50% {
+    transform: translate(0, -20px);
+  }
+  75% {
+    transform: translate(-10px, -10px);
+  }
+}
+
+/* Matrix-like effect */
+.matrix-bg {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.matrix-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 255, 0, 0.1) 0px,
+    rgba(0, 255, 0, 0.1) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+  animation: matrix 20s linear infinite;
+}
+
+@keyframes matrix {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Sans', monospace;
